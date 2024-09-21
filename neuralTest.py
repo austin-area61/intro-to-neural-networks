@@ -18,3 +18,7 @@ y = np.array([1,0,1,0,1,0])
 model = Sequential([
   Dense(1, input_shape =(2,), activation = 'sigmoid')
 ])
+
+model.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
+
+model.fit(x,y, epochs = 500, verbose = 0)
