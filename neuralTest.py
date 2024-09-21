@@ -22,3 +22,8 @@ model = Sequential([
 model.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
 
 model.fit(x,y, epochs = 500, verbose = 0)
+
+new_input = np.array([[22, 1]])
+prediction = model.predict(new_input)
+
+print(f"Wil npc play outside?{'yes' if prediction > 0.5 else 'No'}")
