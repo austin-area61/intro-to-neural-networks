@@ -12,3 +12,9 @@ x = np.array([
   [25, 1],
   [5, 0]
 ])
+
+y = np.array([1,0,1,0,1,0])
+
+model = Sequential([
+  Dense(1, input_shape =(2,), activation = 'sigmoid')
+])
